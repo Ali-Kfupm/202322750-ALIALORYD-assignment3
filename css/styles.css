@@ -328,12 +328,19 @@ header.scrolled {
   border: 1px solid rgba(136, 146, 176, 0.15);
   border-radius: 12px;
   padding: 1.25rem;
-  transition: transform 0.25s ease, border-color 0.25s ease;
+  transition: transform 0.3s ease, border-color 0.25s ease, opacity 0.3s ease;
+  opacity: 1;
 }
 
 .card:hover {
   transform: translateY(-6px);
   border-color: rgba(100, 255, 218, 0.35);
+}
+
+.card.hide {
+  opacity: 0;
+  transform: translateY(10px);
+  pointer-events: none;
 }
 
 /* Image container */
@@ -371,6 +378,7 @@ header.scrolled {
   color: var(--secondary-text-color);
   line-height: 1.6;
 }
+
 
 body.light-mode header {
   background-color: var(--background-color);
@@ -510,11 +518,16 @@ body.light-mode .project-filter {
   border-color: rgba(100, 255, 218, 0.6);
 }
 
-.form-status{
+.form-status {
   margin: 0.5rem 0 0;
-  color: var(--secondary-text-color);
+  font-size: 0.9rem;
+  transition: color 0.3s ease;
 }
 
+.input-error {
+  border-color: #ff6b6b !important;
+}
+  
 /* =====================================================
    FOOTER
 ===================================================== */
