@@ -45,6 +45,14 @@ If no projects match the selected category, a message is displayed to inform the
 
 ---
 
+### Data Handling
+
+A dark/light theme toggle was implemented using JavaScript and localStorage.
+
+When the user changes the theme, the selected preference is saved in localStorage. On future visits or page refreshes, the website reads the saved value and automatically applies the user’s preferred theme.
+
+---
+
 ## Setup Instructions (Run Locally)
 1. Clone the repository:
    ```bash
