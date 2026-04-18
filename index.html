@@ -4,6 +4,7 @@
       <meta charset="utf-8" />
       <meta name="viewport" content="width=device-width, initial-scale=1" />
       <link rel="stylesheet" href="css/styles.css" />
+      <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
       <script type="module" src="js/script.js"></script>
       <title>Ali Aloryd portfolio</title>
     </head>
@@ -11,7 +12,7 @@
       <!-- The header for logo, and navbar in the webpage -->
       <header>
         <nav class="navbar">
-          <div class="logo"><a href="#"><img src="assets/images/logo.png" alt="logo"/></a></div>
+          <div class="logo"><a href="#"><img src="assets/images/logo-optimized.webp" alt="logo" loading="eager" decoding="async" width="80" height="80"/></a></div>
           <ul class="nav-links">
             <li>
               <!-- the span used to color the numbers-->
@@ -21,16 +22,19 @@
               <a href="#projects"><span class="nav-number">02.</span> Projects</a>
             </li>
             <li>
-              <a href="#skills"><span class="nav-number">03.</span> Skills</a>
+              <a href="#github"><span class="nav-number">03.</span> GitHub</a>
             </li>
             <li>
-              <a href="#contact"><span class="nav-number">04.</span> Contact</a>
+              <a href="#skills"><span class="nav-number">04.</span> Skills</a>
+            </li>
+            <li>
+              <a href="#contact"><span class="nav-number">05.</span> Contact</a>
             </li>
           </ul>
           <!-- Theme toggle button -->
           <button id="themeToggle" class="theme-toggle" type="button" aria-label="Toggle dark mode" title="change page theme">🌙</button>
           <!-- The resume is not yet done after I do it I will add it to the github and will work without any changes-->
-          <a href="assets/resume.pdf" class="resume-btn" target="_blank" rel="noopener">Resume</a>
+          <a href="assets/CV-AliAloryd-0544199427.pdf" class="resume-btn" target="_blank" rel="noopener">Resume</a>
           <!-- Hamburger menu for mobile -->
           <button
             id="menuToggle"
@@ -46,9 +50,10 @@
         <div id="mobileMenu" class="mobile-menu">
           <a href="#about"><span class="nav-number">01.</span> About</a>
           <a href="#projects"><span class="nav-number">02.</span> Projects</a>
-          <a href="#skills"><span class="nav-number">03.</span> Skills</a>
-          <a href="#contact"><span class="nav-number">04.</span> Contact</a>
-          <a href="assets/resume.pdf" target="_blank" rel="noopener">Resume</a>
+          <a href="#github"><span class="nav-number">03.</span> GitHub</a>
+          <a href="#skills"><span class="nav-number">04.</span> Skills</a>
+          <a href="#contact"><span class="nav-number">05.</span> Contact</a>
+          <a href="assets/CV-AliAloryd-0544199427.pdf" target="_blank" rel="noopener">Resume</a>
         </div>
       </header>
       <main>
@@ -66,7 +71,8 @@
             </p>
 
             <p class="hero-guide">
-              Use the navigation bar to explore my background, projects, skills, and contact section.
+              Start by exploring my projects using the filter dropdown. Click “Show Details” on any project to view more information.
+              Visit the GitHub section to see my latest repositories, or use the contact form to send me a message directly.
             </p>
             <!-- hero btns -->
             <div class="hero-actions">
@@ -112,10 +118,26 @@
           </div>
         </section>
       
+        <!-- GITHUB REPOSITORIES -->
+        <section id="github" class="section">
+          <div class="container">
+            <h2 class="section-title"><span class="section-number">03.</span> GitHub Repositories</h2>
+            <p class="filter-hint">
+              These repositories are fetched live from my GitHub profile.
+            </p>
+          
+            <p id="githubStatus" class="form-status" role="status" aria-live="polite">
+              Loading repositories...
+            </p>
+          
+            <div class="projects-grid" id="githubReposContainer"></div>
+          </div>
+        </section>
+
         <!-- SKILLS -->
         <section id="skills" class="section">
           <div class="container">
-            <h2 class="section-title"><span class="section-number">03.</span> Skills</h2>
+            <h2 class="section-title"><span class="section-number">04.</span> Skills</h2>
             <!-- Each div tag represents a skill -->
             <div class="skills-grid">
               <div class="skill">HTML</div>
@@ -137,7 +159,7 @@
         <!-- CONTACT -->
         <section id="contact" class="section">
           <div class="container">
-            <h2 class="section-title"><span class="section-number">04.</span> Contact</h2>
+            <h2 class="section-title"><span class="section-number">05.</span> Contact</h2>
             <p>Have a question or want to connect? Send me a message:</p>
             <p class="contact-guide">
               Fill in your name, email, and message, then click “Send Message” to see a confirmation.
@@ -145,20 +167,49 @@
             <form id="contactForm" class="contact-form">
               <label>
                 Name
-                <input type="text" name="name" required placeholder="Your name" />
+                <input
+                  type="text"
+                  name="from_name"
+                  id="contactName"
+                  required
+                  placeholder="Your name"
+                />
               </label>
             
               <label>
                 Email
-                <input type="email" name="email" required placeholder="you@example.com" />
+                <input
+                  type="email"
+                  name="from_email"
+                  id="contactEmail"
+                  required
+                  placeholder="you@example.com"
+                />
+              </label>
+            
+              <label>
+                Subject
+                <input
+                  type="text"
+                  name="subject"
+                  id="contactSubject"
+                  required
+                  placeholder="Message subject"
+                />
               </label>
             
               <label>
                 Message
-                <textarea name="message" rows="5" required placeholder="Write your message..."></textarea>
+                <textarea
+                  name="message"
+                  id="contactMessage"
+                  rows="5"
+                  required
+                  placeholder="Write your message..."
+                ></textarea>
               </label>
             
-              <button type="submit" class="btn primary">Send Message</button>
+              <button id="submitBtn" type="submit" class="btn primary">Send Message</button>
               <p id="formStatus" class="form-status" role="status" aria-live="polite"></p>
             </form>
           </div>
@@ -174,7 +225,7 @@
              class="social-icon"
              aria-label="LinkedIn Profile">
         
-            <img src="assets/images/linkedin.png" alt="LinkedIn">
+            <img src="assets/images/linkedin-optimized.webp" alt="LinkedIn" loading="lazy" decoding="async" width="22" height="22">
             <span class="linkedin-name">alikamalaloryd21</span>
           </a>
         </div>

@@ -1,88 +1,138 @@
-# 202322750-ALIALORYD-assignment2
-# Personal Portfolio Website
+# 202322750-ALIALORYD-assignment3
 
-## Project Description
-This project is a responsive personal portfolio website built using **HTML, CSS, and JavaScript**.
+## 📌 Overview
+This project is a personal portfolio website developed as part of SWE363. It showcases my background, projects, skills, and contact functionality through a structured and interactive web interface.
 
-The website includes:
-- Hero section with introduction
-- About Me
-- Projects (project cards + technologies used)
-- Skills
-- Contact form (frontend only, no backend)
-- Footer with LinkedIn link
-
-The design follows a clean dark theme and is fully responsive across **desktop, tablet, and mobile** devices.
+The website is designed with a focus on:
+- Clean UI design
+- Interactive JavaScript features
+- Real-world integration (APIs and email services)
+- Performance optimization
 
 ---
 
-## Technologies Used
-- HTML5
-- CSS3 (Flexbox & Grid)
-- JavaScript (ES6 Modules)
-- localStorage (Web API)
-- Responsive design using Media Queries
+## 🚀 Live Demo
+https://ali-kfupm.github.io/202322750-ALIALORYD-assignment3/
 
 ---
 
-## Features
-- Fixed navigation bar with scroll shadow effect
-- Active navigation highlighting while scrolling
+## 📂 Project Structure
+project-root/
+│── index.html
+│── css/
+│ └── styles.css
+│── js/
+│ ├── script.js
+│ ├── component/
+│ │ └── projects.js
+│ └── data/
+│ └── projectsData.js
+│── assets/
+│ └── images/
+│── docs/
+│ ├── technical-documentation.md
+│ └── ai-usage-report.md
+
+---
+
+## ✨ Features
+
+### 1. Navigation & UI
+- Fixed navigation bar with active section highlighting
 - Smooth scrolling between sections
-- Responsive layout for desktop, tablet, and phone
-- Contact form with validation and feedback
-- Dynamic footer year
-- Clean and modular code structure
+- Responsive layout (desktop + mobile)
+- Dark/Light mode toggle with localStorage
 
 ---
 
-## Dynamic Content
-A dynamic filtering system was implemented for the Projects section.
-
-Users can select a category from a dropdown menu, and the displayed projects update instantly based on the selection. The filtering logic is data-driven, using project categories defined in a separate data file.
-
-If no projects match the selected category, a message is displayed to inform the user.
-
----
-
-## Data Handling
-A dark/light theme toggle was implemented using JavaScript and localStorage.
-
-When the user changes the theme, the selected preference is saved in localStorage. On future visits or page refreshes, the website reads the saved value and automatically applies the user’s preferred theme.
+### 2. Projects Section
+- Dynamic rendering using JavaScript
+- Category filtering (All / Web / System / Mobile)
+- “Show Details / Hide Details” toggle for each project
+- Project state is saved using `localStorage`
 
 ---
 
-## Animation and Transitions
-Smooth transitions were added to the project cards during filtering.
-
-When a user selects a category, project cards fade in and out instead of appearing or disappearing abruptly. This improves the overall user experience and provides a more polished interface.
-
----
-
-## Error Handling and User Feedback
-The application provides clear feedback and validation:
-
-- Form inputs are validated before submission
-- Email format is checked
-- Error messages are displayed when inputs are invalid
-- A success message is shown after submission
-- A message appears when no projects match the selected category
+### 3. GitHub Integration (NEW)
+- Fetches repositories dynamically using GitHub API
+- Displays latest repositories sorted by update date
+- Shows language, stars, and last updated time
 
 ---
 
-## Live Demo
-
-https://Ali-Kfupm.github.io/202322750-ALIALORYD-assignment2/
+### 4. Contact Form (Enhanced)
+- Form validation (required fields, email format, message length)
+- Real email sending using EmailJS
+- Auto-reply email sent to user
+- Submission states:
+  - Sending...
+  - Success
+  - Error handling
 
 ---
 
-## Setup Instructions (Run Locally)
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/Ali-Kfupm/202322750-ALIALORYD-assignment2.git
+### 5. Performance Optimization (NEW)
+- Images resized and compressed (WebP)
+- Lazy loading for project images
+- Added `width` and `height` attributes
+- Optimized rendering behavior
 
-2. Open the project in VS Code and install Live Server from extensions
+---
 
-3. Right-click index.html
+## 🌐 Compatibility
+- Tested on Chrome, Edge, and mobile browsers
+- Responsive design supports desktop, tablet, and mobile devices
 
-4. Select "Open with Live Server"
+---
+
+## 🧭 How to Use the Website (Improved UX)
+
+1. **Start at the Home (Hero) section**
+   - Read a brief introduction
+
+2. **Navigate using the top navbar**
+   - About → background and goals
+   - Projects → view all work
+   - GitHub → latest repositories
+   - Skills → technical abilities
+   - Contact → send a message
+
+3. **Projects Section**
+   - Use the filter dropdown to select a category
+   - Click **“Show Details”** to expand a project
+   - Details will remain open even after refresh
+
+4. **Contact Section**
+   - Fill all fields (Name, Email, Subject, Message)
+   - Click “Send Message”
+   - You will receive a confirmation email
+
+---
+
+## 🛠 Technologies Used
+- HTML5
+- CSS3 (Responsive Design + Variables)
+- JavaScript (ES Modules)
+- GitHub REST API
+- EmailJS
+
+---
+
+## 📥 Installation
+
+Clone the repository:
+git clone https://github.com/Ali-Kfupm/202322750-ALIALORYD-assignment3.git
+
+Open `index.html` in a browser.
+
+---
+
+## 📌 Notes
+- This project uses EmailJS (no backend required)
+- GitHub API is used for dynamic content
+- LocalStorage is used for UI state persistence
+
+---
+
+## 👤 Author
+Ali Aloryd

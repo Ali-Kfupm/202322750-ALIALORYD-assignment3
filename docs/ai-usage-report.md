@@ -1,74 +1,72 @@
 # AI Usage Report
 
-## 1. Tools Used & Use Cases
-
-### Tool Used:
-- **ChatGPT (GPT-5.4)**
-
-### How I Used It:
-
-I used ChatGPT as a development assistant throughout this portfolio assignment. It was mainly used to guide development decisions and improve code quality rather than directly generating final code.
-
-Specifically, I used it for:
-
-- Improving code structure and modular design (separating data and components into different files)
-- Debugging JavaScript issues (e.g., module imports, event handling, and scope errors)
-- Implementing dynamic content (project rendering and filtering system)
-- Adding localStorage for saving user theme preferences (dark/light mode)
-- Implementing animations for smoother UI interactions (card filtering transitions)
-- Improving responsive design across desktop, tablet, and mobile views
-- Enhancing UI/UX (navigation layout, dropdown usability, mobile header alignment)
-- Writing and refining documentation (README and this report)
-
-All suggestions were reviewed, tested, and adapted before being used.
+## Tools Used
+- ChatGPT
 
 ---
 
-## 2. Benefits & Challenges
+## How AI Was Used
 
-### Benefits:
+AI was used as a development assistant to support:
 
-- Helped organize the project into a cleaner modular structure
-- Improved understanding of dynamic content using JavaScript
-- Made it easier to implement localStorage for persistent user preferences
-- Assisted in adding smooth animations and transitions
-- Saved time when debugging issues (e.g., incorrect import paths and event logic)
-- Improved overall UI/UX design and responsiveness
-- Helped produce clearer and more structured documentation
-
-### Challenges:
-
-- Some AI-generated code required modification to fit my project structure
-- Debugging JavaScript errors (such as incorrect function scope and missing brackets) required careful review
-- Responsive layout changes sometimes affected other components and needed adjustment
-- Animation logic required refinement to work smoothly with filtering
+### 1. Code Development
+- Structuring JavaScript modules
+- Implementing GitHub API integration
+- Building EmailJS contact form
+- Creating project toggle functionality
 
 ---
 
-## 3. Learning Outcomes
-
-Through using AI in this assignment, I learned:
-
-- How to structure a project using modular JavaScript (separating data and components)
-- How to implement dynamic content using data-driven rendering
-- How to use localStorage to persist user preferences across sessions
-- How to add animations and transitions to improve user experience
-- How to debug JavaScript issues related to scope, imports, and DOM updates
-- How responsive design decisions affect layout and usability
-- The importance of validating and adapting AI-generated code
-
-This improved both my technical skills and my problem-solving approach.
+### 2. Debugging
+- Fixing UI issues (grid stretching problem)
+- Adjusting image rendering behavior
+- Fixing event handling for project toggles
 
 ---
 
-## 4. Responsible Use & Modifications
+### 3. Feature Implementation
+AI assisted in implementing:
+- GitHub repositories section
+- Contact form with real email sending
+- Auto-reply email system
+- LocalStorage state persistence
+- Performance optimizations
 
-I ensured responsible AI usage by:
+---
 
-- Reviewing and understanding all generated code before using it
-- Modifying AI suggestions to match my project design and structure
-- Testing all features manually (filtering, theme toggle, animations, etc.)
-- Avoiding direct copy-paste without understanding
-- Ensuring all final code reflects my own implementation decisions
+### 4. Documentation
+AI helped generate:
+- README improvements
+- Technical documentation
+- Feature explanations
 
-AI was used strictly as a support and learning tool, and the final project represents my own work and understanding.
+---
+
+## Example of AI-Assisted Problem Solving
+
+One challenge was fixing the project cards expanding incorrectly in a grid layout.
+AI suggested adjusting CSS Grid behavior using:
+- align-items: start
+- align-self: start
+
+This resolved the issue where all cards in a row stretched together.
+
+This demonstrates how AI was used not only for generating code, but also for debugging layout behavior and improving user experience.
+
+---
+
+## Reflection
+
+AI significantly improved development speed by:
+- Providing structured solutions
+- Reducing debugging time
+- Suggesting best practices
+
+However:
+- All code was reviewed and tested manually
+- Adjustments were made to match assignment requirements
+
+---
+
+## Conclusion
+AI was used as a supporting tool, not a replacement for understanding. It helped improve both code quality and development efficiency.
